@@ -1,3 +1,4 @@
+
 * {
   margin: 0;
   padding: 0;
@@ -5,57 +6,180 @@
 }
 
 body {
-  background: #080d18;
-  color: white;
+  background: #070b14;
+  color: #e8f0ff;
   font-family: Arial, sans-serif;
-  padding: 25px;
+  padding: 18px;
 }
 
-h1 {
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 0;
+  border-bottom: 1px solid #1c2b40;
+}
+
+.header h1 {
+  font-size: 25px;
   color: #00e5ff;
-  text-align: center;
-  margin-top: 30px;
-  font-size: 30px;
+  letter-spacing: 1px;
 }
 
-p {
-  text-align: center;
-  color: #9aa9bd;
-  margin: 12px 0 40px;
+.header h1 span {
+  color: #fff;
 }
 
-h2 {
+.header p {
+  color: #8293aa;
+  margin-top: 7px;
+  font-size: 12px;
+}
+
+.status {
+  color: #00e59b;
+  font-size: 11px;
+  background: #10251f;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.dashboard {
+  max-width: 650px;
+  margin: auto;
+}
+
+.welcome {
+  padding: 28px 0;
+}
+
+.welcome h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.welcome p {
+  color: #8393aa;
+  font-size: 13px;
+}
+
+.panel {
+  background: #101827;
+  border: 1px solid #1d2c42;
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 18px;
+}
+
+.panel h3 {
+  color: #00e5ff;
+  font-size: 17px;
   margin-bottom: 20px;
 }
 
-select, input {
+label {
+  display: block;
+  color: #a9b9ce;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+input, select {
   width: 100%;
-  padding: 15px;
-  margin-bottom: 15px;
-  background: #151f30;
+  padding: 14px;
+  background: #080f1d;
+  border: 1px solid #293b54;
+  border-radius: 9px;
   color: white;
-  border: 1px solid #26374e;
-  border-radius: 10px;
-  font-size: 16px;
+  margin-bottom: 17px;
+  font-size: 15px;
 }
 
 button {
   width: 100%;
-  padding: 16px;
-  background: #00c8d9;
-  color: #061018;
+  padding: 15px;
+  background: linear-gradient(90deg, #00c8d9, #007cff);
   border: none;
-  border-radius: 10px;
-  font-size: 17px;
+  border-radius: 9px;
+  color: #06101c;
   font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 8px;
 }
 
-#result {
-  background: #151f30;
-  border: 1px solid #26374e;
-  border-radius: 12px;
-  padding: 20px;
-  margin-top: 25px;
+button:active {
+  opacity: 0.8;
+}
+
+#result, #imageResult {
+  background: #080f1d;
+  border: 1px solid #293b54;
+  padding: 18px;
+  border-radius: 10px;
+  color: #a9b9ce;
+  line-height: 1.8;
+  overflow-wrap: anywhere;
+}
+
+#result h2 {
+  color: #ffca55;
+  margin-top: 10px;
+}
+
+.indicators {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.indicators div {
+  background: #080f1d;
+  padding: 14px 8px;
+  border-radius: 9px;
+  text-align: center;
+  color: #91a4bc;
+  font-size: 12px;
+}
+
+.indicators strong {
+  display: block;
   color: #00e5ff;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
+#tradingview_chart {
+  min-height: 180px;
+  background: #080f1d;
+  border-radius: 10px;
+  padding: 20px;
+  color: #91a4bc;
+  text-align: center;
+}
+
+#imagePreview img {
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  color: #65758b;
+  font-size: 11px;
+  line-height: 2;
+  padding: 25px 5px;
+}
+
+@media (max-width: 380px) {
+  body {
+    padding: 12px;
+  }
+
+  .indicators {
+    grid-template-columns: 1fr;
+  }
+}
