@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAI JARVIS Trading AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>SAI JARVIS</h1>
+  <p>AI Trading Analysis Assistant</p>
+
+  <h2>Market Analysis</h2>
+
+  <select id="market">
+    <option>Forex</option>
+    <option>Crypto</option>
+    <option>Commodities</option>
+    <option>Indices</option>
+  </select>
+
+  <input id="pair" placeholder="Enter pair e.g. EUR/USD">
+
+  <button onclick="analyze()">Analyze Market</button>
+
+  <div id="result">Waiting for analysis...</div>
+
+  <script src="script.js"></script>
+</body>
+</html>
