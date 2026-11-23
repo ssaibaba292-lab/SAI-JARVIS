@@ -4,29 +4,96 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SAI JARVIS Trading AI</title>
+  <meta name="theme-color" content="#080d18">
+  <title>SAI JARVIS | Trading AI</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1>SAI JARVIS</h1>
-  <p>AI Trading Analysis Assistant</p>
+<header class="header">
+  <div>
+    <h1>SAI JARVIS <span>AI</span></h1>
+    <p>Intelligent Trading Analysis</p>
+  </div>
+  <div class="status">● SYSTEM ONLINE</div>
+</header>
 
-  <h2>Market Analysis</h2>
+<main class="dashboard">
 
-  <select id="market">
-    <option>Forex</option>
-    <option>Crypto</option>
-    <option>Commodities</option>
-    <option>Indices</option>
-  </select>
+  <section class="welcome">
+    <h2>Trading Dashboard</h2>
+    <p>Welcome to your AI trading assistant.</p>
+  </section>
 
-  <input id="pair" placeholder="Enter pair e.g. EUR/USD">
+  <section class="panel">
+    <h3>Market Selection</h3>
 
-  <button onclick="analyze()">Analyze Market</button>
+    <label>Market</label>
+    <select id="market">
+      <option value="Forex">Forex</option>
+      <option value="Crypto">Crypto</option>
+      <option value="Commodities">Commodities</option>
+      <option value="Indices">Indices</option>
+    </select>
 
-  <div id="result">Waiting for analysis...</div>
+    <label>Trading Pair</label>
+    <input id="pair" placeholder="EUR/USD">
 
-  <script src="script.js"></script>
+    <label>Timeframe</label>
+    <select id="timeframe">
+      <option>1m</option>
+      <option>5m</option>
+      <option>15m</option>
+      <option>30m</option>
+      <option>1H</option>
+      <option>4H</option>
+      <option>1D</option>
+    </select>
+
+    <button id="analyzeBtn" onclick="analyze()">
+      ANALYZE MARKET
+    </button>
+  </section>
+
+  <section class="panel">
+    <h3>Trading Analysis</h3>
+    <div id="result">
+      <p>Waiting for market data...</p>
+      <h2>WAIT</h2>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>Technical Analysis</h3>
+    <div class="indicators">
+      <div>RSI <strong id="rsi">--</strong></div>
+      <div>MACD <strong id="macd">--</strong></div>
+      <div>Trend <strong id="trend">--</strong></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3>Chart Screenshot Analysis</h3>
+    <input type="file" id="chartImage" accept="image/*">
+    <div id="imagePreview"></div>
+    <button onclick="analyzeImage()">ANALYZE SCREENSHOT</button>
+    <div id="imageResult">Upload your chart screenshot.</div>
+  </section>
+
+  <section class="panel">
+    <h3>Market Chart</h3>
+    <div id="tradingview_chart">
+      TradingView chart will load here.
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>SAI JARVIS AI © 2026</p>
+  <p>Trading involves financial risk. No guaranteed signals.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
